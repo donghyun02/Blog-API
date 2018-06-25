@@ -14,7 +14,7 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True)
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
