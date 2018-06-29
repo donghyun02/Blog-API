@@ -9,7 +9,7 @@
     },
     "production": {
         "aws_region": "ap-northeast-2",
-        "django_settings": "Blog.settings",
+        "django_settings": "Blog.production_settings",
         "profile_name": "default",
         "project_name": "blog",
         "runtime": "python3.6",
