@@ -30,7 +30,7 @@ def get_secret_key(secret_path):
 SECRET_KEY = get_secret_key(SECRET_PATH)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
