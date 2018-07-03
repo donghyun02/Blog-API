@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'zappa_django_utils',
     'corsheaders',
+    'storages',
 
     'post',
 ]
@@ -152,5 +153,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+AWS_STORAGE_BUCKET_NAME = 'blog-a1m0nd-kr-api-static'
+AWS_S3_CUSTOM_DOMAIN = '{}.s3.amazonaws.com'.format(AWS_STORAGE_BUCKET_NAME)
+STATIC_URL = 'https://{}/'.format(AWS_S3_CUSTOM_DOMAIN)
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# STATIC_ROOT = 'storages.backends.s3boto.S3BotoStorage'
