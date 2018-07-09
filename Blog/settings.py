@@ -30,7 +30,7 @@ def get_secret_key(secret_path):
 SECRET_KEY = get_secret_key(SECRET_PATH)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -104,7 +104,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'zappa_django_utils.db.backends.s3sqlite',
         'NAME': 'sqlite.db',
-        'BUCKET': 'almond.blog',
+        'BUCKET': 'dev-blog-a1m0nd-kr-api',
     }
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -154,9 +154,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 AWS_S3_HOST = 's3.ap-northeast-2.amazonaws.com'
-AWS_STORAGE_BUCKET_NAME = 'blog-a1m0nd-kr-api-static'
+AWS_STORAGE_BUCKET_NAME = 'dev-blog-a1m0nd-kr-api'
 AWS_S3_CUSTOM_DOMAIN = '{}.s3.amazonaws.com'.format(AWS_STORAGE_BUCKET_NAME)
 STATIC_URL = 'https://{}/'.format(AWS_S3_CUSTOM_DOMAIN)
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
