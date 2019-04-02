@@ -106,14 +106,6 @@ DATABASES = {
         'NAME': 'production.db',
         'BUCKET': 'prod-blog-a1m0nd-kr-api',
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'almond-blog-db',
-    #     'USER': 'dh990218',
-    #     'PASSWORD': 'dh1042714',
-    #     'HOST': 'almond-blog-db.ct0h18s6eh4y.ap-northeast-2.rds.amazonaws.com',
-    #     'PORT': '5432',
-    # }
 }
 
 
